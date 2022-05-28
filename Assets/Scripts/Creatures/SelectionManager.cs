@@ -29,6 +29,10 @@ public class SelectionManager : MonoBehaviour
 			hitObject = hit.transform.gameObject;
 			hitDistance = hit.distance;
 			rayColor = Color.green;
+			if (hitObject.TryGetComponent(out IPickable item) && player.PlayerInput.select)
+			{
+				item.PickItem();
+			}
 		}
 		else
 		{
@@ -36,6 +40,14 @@ public class SelectionManager : MonoBehaviour
 			hitDistance = rayLength;
 			rayColor = Color.red;
 		}
+
+		//if (hitObject != null)
+		//{
+		//	if (hitObject.TryGetComponent(out Item item) && player.PlayerInput.select)
+		//	{
+		//		Debug.Log(item.name);
+		//	}
+		//}
 	}
 
 	private void OnDrawGizmosSelected()
