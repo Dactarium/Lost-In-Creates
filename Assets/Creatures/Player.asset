@@ -16,9 +16,9 @@ MonoBehaviour:
   canAttack: 1
   damage: 5
   canMove: 1
-  moveSpeed: 4
+  moveSpeed: 8
   canRun: 1
-  runSpeed: 6
+  runSpeed: 16
   canJump: 1
-  jumpHeight: 1.2
-  gravity: -15
+  jumpHeight: 3
+  gravity: -20
