@@ -3,12 +3,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 #endif
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IInteractable, IDamageable
 {
 	[SerializeField] public Creature Creature;
 	public PlayerInputs PlayerInput;
 	public PlayerInput PlayerInputAsset;
 	public CharacterController Controller;
+
+	[SerializeField] private int health;
 
 	[HideInInspector]
 	public bool Grounded;
@@ -16,6 +18,10 @@ public class Player : MonoBehaviour
 	private float GroundedRadius = 0.5f;
 	[SerializeField] private LayerMask GroundLayers;
 
+	private void Start()
+	{
+		health = Creature.health;
+	}
 
 	private void Update()
 	{
@@ -26,5 +32,18 @@ public class Player : MonoBehaviour
 	{
 		Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
 		Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
+	}
+
+	public void Interact()
+	{
+	}
+
+	public void TakeDamage(int damage)
+	{
+		health -= damage;
+		if (health <= 0)
+		{
+			Events.OnDead.Invoke();
+		}
 	}
 }

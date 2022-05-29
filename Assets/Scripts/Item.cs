@@ -9,8 +9,3 @@ public class Item : MonoBehaviour, IPickable
 		Events.OnItemSelect?.Invoke(this);
 	}
 }
-
-interface IPickable
-{
-	void PickItem();
-}
