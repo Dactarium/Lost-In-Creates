@@ -10,7 +10,7 @@ public class ItemPlacer : MonoBehaviour
     [Header("SpawnPointler Sahnede olmalı")]
     [SerializeField] private List<Transform> _spawnPoints;
 
-    private void Start()
+    private void Awake()
     {
         foreach (Transform item in _items)
         {
