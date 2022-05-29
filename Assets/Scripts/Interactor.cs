@@ -32,9 +32,9 @@ public class Interactor : MonoBehaviour
 
 	protected virtual void Interact(GameObject hit)
 	{
-		if (hit.TryGetComponent(out IInteractable interactable))
+		if (hit.TryGetComponent(out IPickable pickable))
 		{
-			interactable.Interact();
+			pickable.PickItem();
 		}
 	}
 

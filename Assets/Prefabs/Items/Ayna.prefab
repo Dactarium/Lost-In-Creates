@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7755901610947604221}
   - component: {fileID: 2778355137303300664}
   - component: {fileID: 8099238493133012695}
-  m_Layer: 0
+  - component: {fileID: -5495483689420346495}
+  m_Layer: 8
   m_Name: Ayna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,3 +116,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3125, y: 0.6875, z: 0.06875}
   m_Center: {x: 0, y: 0.34375, z: 0.015625}
+--- !u!114 &-5495483689420346495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929647454053621784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77e5286c8729b344b41a0288819c8d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
