@@ -39673,8 +39673,8 @@ MonoBehaviour:
 
     <color=#FF0000>Mouse</color> - Look / Worm
 
-    <color=#FF0000>Other
-    Inputs</color> - Etc / Sunflower  '
+    <color=#FF0000>Shift</color>
+    - Sprint / Sunflower  '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 898a64a9a0f91154baefd7a6f508ca3d, type: 2}
   m_sharedMaterial: {fileID: -8545825821477008992, guid: 898a64a9a0f91154baefd7a6f508ca3d, type: 2}
