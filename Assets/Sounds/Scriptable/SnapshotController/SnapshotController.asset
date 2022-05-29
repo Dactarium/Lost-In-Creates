@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934f9d03249bee44b883f4d8242c1c91, type: 3}
+  m_Name: SnapshotController
+  m_EditorClassIdentifier: 
+  _deep: {fileID: -8136077772786937315, guid: b6b1a76f27f59114983398c678c5b9ae, type: 2}
+  _inside: {fileID: 3345069364194314663, guid: b6b1a76f27f59114983398c678c5b9ae, type: 2}
+  _outside: {fileID: 24500006, guid: b6b1a76f27f59114983398c678c5b9ae, type: 2}
+  _transitonTime: 1
