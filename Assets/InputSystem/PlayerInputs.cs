@@ -14,6 +14,7 @@ public class PlayerInputs : MonoBehaviour
 	public bool attack;
 	public bool select;
 
+
 	[Header("Movement Settings")]
 	public bool analogMovement;
 
@@ -57,9 +58,40 @@ public class PlayerInputs : MonoBehaviour
 		AttackInput(value.isPressed);
 	}
 #endif
+
 	public void MoveInput(Vector2 newMoveDirection)
 	{
 		move = newMoveDirection;
+
+		if (newMoveDirection.x > 0)
+		{
+			GameManager.Instance.blue.canMove = true;
+		}
+		else if (newMoveDirection.x < 0)
+		{
+			GameManager.Instance.green.canMove = true;
+		}
+		else
+		{
+			GameManager.Instance.green.canMove = false;
+			GameManager.Instance.blue.canMove = false;
+		}
+
+
+		if (newMoveDirection.y > 0)
+		{
+			GameManager.Instance.orange.canMove = true;
+		}
+		else if (newMoveDirection.y < 0)
+		{
+			GameManager.Instance.purple.canMove = true;
+		}
+		else
+		{
+			GameManager.Instance.purple.canMove = false;
+			GameManager.Instance.orange.canMove = false;
+		}
+
 	}
 
 	public void LookInput(Vector2 newLookDirection)

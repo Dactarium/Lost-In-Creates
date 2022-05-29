@@ -5,4 +5,7 @@ public static class Events
 
 	public delegate void Dead();
 	public static Dead OnDead;
+
+	public delegate void OnMove(string key);
+	public static OnMove OnKeyPressed;
 }

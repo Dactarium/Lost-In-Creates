@@ -7,6 +7,8 @@ public class Creature : ScriptableObject
 {
     [SerializeField] public int health;
 
+	[SerializeField] public string creature_name;
+
     [SerializeField] public bool canAttack;
     [ShowIf(ActionOnConditionFail.DontDraw, ConditionOperator.And, nameof(canAttack))]
     [SerializeField] public int damage;

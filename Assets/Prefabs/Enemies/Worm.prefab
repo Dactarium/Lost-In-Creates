@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3532806252637285795
+--- !u!1 &7130745720549687263
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5145882017437543838}
-  - component: {fileID: 4649266942525192800}
+  - component: {fileID: 1682862597535026931}
+  - component: {fileID: 727963682792539975}
   m_Layer: 0
   m_Name: Interactor
   m_TagString: Untagged
@@ -17,35 +17,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5145882017437543838
+--- !u!4 &1682862597535026931
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3532806252637285795}
+  m_GameObject: {fileID: 7130745720549687263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7941012250381944912}
+  m_Father: {fileID: 7153194327543078741}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4649266942525192800
+--- !u!65 &727963682792539975
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3532806252637285795}
+  m_GameObject: {fileID: 7130745720549687263}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.19109336, y: 0.426801, z: 0.12361093}
   m_Center: {x: -0.0048561892, y: -0.020915493, z: 0.065951295}
---- !u!1 &7941012250381944878
+--- !u!1 &7153194327543078699
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,41 +53,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7941012250381944912}
-  - component: {fileID: 7941012250381944913}
-  - component: {fileID: 7941012250381944915}
-  - component: {fileID: 9181150734184168670}
-  - component: {fileID: 9016717016112948536}
+  - component: {fileID: 7153194327543078741}
+  - component: {fileID: 7153194327543078740}
+  - component: {fileID: 7153194327543078742}
+  - component: {fileID: 1791274790642352880}
+  - component: {fileID: 8414776239931139488}
   m_Layer: 0
-  m_Name: Sunflower
+  m_Name: Worm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7941012250381944912
+--- !u!4 &7153194327543078741
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7941012250381944878}
+  m_GameObject: {fileID: 7153194327543078699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.6, z: 0}
+  m_LocalPosition: {x: -35.78, y: 24.301575, z: 87.56636}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 5145882017437543838}
+  - {fileID: 1682862597535026931}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7941012250381944913
+--- !u!212 &7153194327543078740
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7941012250381944878}
+  m_GameObject: {fileID: 7153194327543078699}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -122,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -863984215, guid: bc72394868dabd940ac4ee63dda9e6b3, type: 3}
+  m_Sprite: {fileID: -498449870, guid: 4bb511f5471873c4497d617aa0015554, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,17 +133,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &7941012250381944915
+--- !u!95 &7153194327543078742
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7941012250381944878}
+  m_GameObject: {fileID: 7153194327543078699}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1b22f8d4857e9724dbf88ec31c57b006, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4223d82b874e69d49bbcb39cde286af8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,13 +153,13 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!195 &9181150734184168670
+--- !u!195 &1791274790642352880
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7941012250381944878}
+  m_GameObject: {fileID: 7153194327543078699}
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.16
@@ -175,21 +175,21 @@ NavMeshAgent:
   m_BaseOffset: 0.32
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &9016717016112948536
+--- !u!114 &8414776239931139488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7941012250381944878}
+  m_GameObject: {fileID: 7153194327543078699}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 090bcfd48fd2ea6498e597d9f64eca27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creature: {fileID: 11400000, guid: d496f2cb9e21beb4580594bd03f85d3e, type: 2}
-  agent: {fileID: 9181150734184168670}
+  creature: {fileID: 11400000, guid: 430ebdb59aebff44b8a3aeda9d78e302, type: 2}
+  agent: {fileID: 1791274790642352880}
   target: {fileID: 0}
-  animator: {fileID: 7941012250381944915}
+  animator: {fileID: 7153194327543078742}
   canMove: 1
   state: 0

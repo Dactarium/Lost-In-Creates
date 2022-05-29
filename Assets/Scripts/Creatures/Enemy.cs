@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour, IInteractable
+public abstract class Enemy : MonoBehaviour, IInteractable
 {
 	[SerializeField] public Creature creature;
 	[SerializeField] NavMeshAgent agent;
@@ -9,8 +9,7 @@ public class Enemy : MonoBehaviour, IInteractable
 
 	[SerializeField] private Animator animator;
 
-	[HideInInspector]
-	public bool canMove = true;
+	public bool canMove = false;
 
 	public enum EnemyState
 	{
@@ -18,17 +17,30 @@ public class Enemy : MonoBehaviour, IInteractable
 		attack
 	}
 
-	public EnemyState state = EnemyState.follow;
+	public EnemyState state;
 
 	public void Interact()
 	{
 	}
 
-	private void Update()
+	protected virtual void Awake()
+	{
+		if (target == null)
+		{
+			target = FindObjectOfType<Player>().transform;
+		}
+	}
+
+	protected virtual void Update()
 	{
 		if (canMove)
 		{
+			agent.isStopped = false;
 			agent.SetDestination(target.position);
+		}
+		else
+		{
+			agent.isStopped = true;
 		}
 	}
 
