@@ -40,6 +40,14 @@ public class PlayerInputs : MonoBehaviour
 		if (cursorInputForLook)
 		{
 			LookInput(value.Get<Vector2>());
+			if (value.Get<Vector2>() != Vector2.zero)
+			{
+				GameManager.Instance.worm.canMove = true;
+			}
+			else
+			{
+				GameManager.Instance.worm.canMove = false;
+			}
 		}
 	}
 
@@ -50,6 +58,14 @@ public class PlayerInputs : MonoBehaviour
 
 	public void OnSprint(InputValue value)
 	{
+		if (value.isPressed)
+		{
+			GameManager.Instance.sunFlower.canMove = true;
+		}
+		else
+		{
+			GameManager.Instance.sunFlower.canMove = false;
+		}
 		SprintInput(value.isPressed);
 	}
 
@@ -80,11 +96,11 @@ public class PlayerInputs : MonoBehaviour
 
 		if (newMoveDirection.y > 0)
 		{
-			GameManager.Instance.orange.canMove = true;
+			GameManager.Instance.purple.canMove = true;
 		}
 		else if (newMoveDirection.y < 0)
 		{
-			GameManager.Instance.purple.canMove = true;
+			GameManager.Instance.orange.canMove = true;
 		}
 		else
 		{

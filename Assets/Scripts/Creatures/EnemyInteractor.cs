@@ -10,14 +10,15 @@ public class EnemyInteractor : MonoBehaviour
 	{
 		if (other.gameObject.TryGetComponent(out IDamageable damageable))
 		{
+			enemy.canMove = false;
 			enemy.Attack(damageable);
 		}
-		Debug.Log(other.gameObject.name);
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
-		enemy.ChangeState(Enemy.EnemyState.follow);
+		//enemy.ChangeState(Enemy.EnemyState.follow);
+		enemy.canMove = true;
 	}
 
 

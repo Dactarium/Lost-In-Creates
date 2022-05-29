@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7919048232121147858}
   - component: {fileID: 7640998478705161772}
+  - component: {fileID: 4375250793856454247}
   m_Layer: 0
   m_Name: Interactor
   m_TagString: Untagged
@@ -45,6 +46,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19109336, y: 0.426801, z: 0.12361093}
   m_Center: {x: -0.0048561892, y: -0.020915493, z: 0.065951295}
+--- !u!114 &4375250793856454247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984056186706731503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccbb6cb136d51114a940350cf6042dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 4064822568859302454}
 --- !u!1 &4952799153540416610
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +71,7 @@ GameObject:
   - component: {fileID: 4952799153540416541}
   - component: {fileID: 4952799153540416543}
   - component: {fileID: 6189700664138297490}
-  - component: {fileID: 6318009720301594996}
+  - component: {fileID: 4064822568859302454}
   m_Layer: 0
   m_Name: Sunflower
   m_TagString: Untagged
@@ -163,11 +177,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.16
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 15
+  m_Acceleration: 20
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_AngularSpeed: 360
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -175,7 +189,7 @@ NavMeshAgent:
   m_BaseOffset: 0.32
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &6318009720301594996
+--- !u!114 &4064822568859302454
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,12 +198,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4952799153540416610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090bcfd48fd2ea6498e597d9f64eca27, type: 3}
+  m_Script: {fileID: 11500000, guid: 884bc183b2b0ce0488cd03c771377898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   creature: {fileID: 11400000, guid: d496f2cb9e21beb4580594bd03f85d3e, type: 2}
   agent: {fileID: 6189700664138297490}
   target: {fileID: 0}
   animator: {fileID: 4952799153540416543}
-  canMove: 1
+  canMove: 0
   state: 0

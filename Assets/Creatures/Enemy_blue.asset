@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831e3771ea7a9004aa1a0d9641c46768, type: 3}
   m_Name: Enemy_blue
   m_EditorClassIdentifier: 
-  health: 15
+  health: 1
+  creature_name: 
   canAttack: 1
-  damage: 2
+  damage: 1
   canMove: 1
   moveSpeed: 2
   canRun: 0

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Worm
   m_EditorClassIdentifier: 
   health: 15
+  creature_name: 
   canAttack: 1
-  damage: 2
+  damage: 1
   canMove: 1
   moveSpeed: 2
   canRun: 0

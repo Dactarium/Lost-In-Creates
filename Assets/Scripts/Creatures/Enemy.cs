@@ -37,10 +37,12 @@ public abstract class Enemy : MonoBehaviour, IInteractable
 		{
 			agent.isStopped = false;
 			agent.SetDestination(target.position);
+			animator.SetBool("IsAttacking", true);
 		}
 		else
 		{
 			agent.isStopped = true;
+			animator.SetBool("IsAttacking", false);
 		}
 	}
 

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1682862597535026931}
   - component: {fileID: 727963682792539975}
+  - component: {fileID: 7301399949046831263}
   m_Layer: 0
   m_Name: Interactor
   m_TagString: Untagged
@@ -40,11 +41,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7130745720549687263}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.19109336, y: 0.426801, z: 0.12361093}
   m_Center: {x: -0.0048561892, y: -0.020915493, z: 0.065951295}
+--- !u!114 &7301399949046831263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7130745720549687263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccbb6cb136d51114a940350cf6042dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 3269809239988667922}
 --- !u!1 &7153194327543078699
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +71,7 @@ GameObject:
   - component: {fileID: 7153194327543078740}
   - component: {fileID: 7153194327543078742}
   - component: {fileID: 1791274790642352880}
-  - component: {fileID: 8414776239931139488}
+  - component: {fileID: 3269809239988667922}
   m_Layer: 0
   m_Name: Worm
   m_TagString: Untagged
@@ -163,10 +177,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.16
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 10
+  m_Acceleration: 100
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -175,7 +189,7 @@ NavMeshAgent:
   m_BaseOffset: 0.32
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8414776239931139488
+--- !u!114 &3269809239988667922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,12 +198,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7153194327543078699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090bcfd48fd2ea6498e597d9f64eca27, type: 3}
+  m_Script: {fileID: 11500000, guid: 6df3e7ccd93e4e046abebb35c609ff8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   creature: {fileID: 11400000, guid: 430ebdb59aebff44b8a3aeda9d78e302, type: 2}
   agent: {fileID: 1791274790642352880}
   target: {fileID: 0}
   animator: {fileID: 7153194327543078742}
-  canMove: 1
+  canMove: 0
   state: 0

@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5393215578589016654}
   - component: {fileID: 5393215578589016655}
   - component: {fileID: 5393215578589016640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,8 +178,7 @@ MonoBehaviour:
   raySource: {fileID: 0}
   interactableLayers:
     serializedVersion: 2
-    m_Bits: 0
-  hitObject: {fileID: 0}
+    m_Bits: 384
   player: {fileID: 7525280458053391796}
 --- !u!1 &8616685848737228372
 GameObject:
