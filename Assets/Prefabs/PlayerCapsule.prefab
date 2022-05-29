@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5393215578589016654}
   - component: {fileID: 5393215578589016655}
   - component: {fileID: 5393215578589016640}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3008724851805587497}
   - component: {fileID: 6639396117672109941}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Selector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,9 +173,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a84947d3406c784da1e81545c0e686d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 7525280458053391796}
   rayLength: 5
   rayThickness: 0.2
+  raySource: {fileID: 0}
+  interactableLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  hitObject: {fileID: 0}
+  player: {fileID: 7525280458053391796}
 --- !u!1 &8616685848737228372
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +197,7 @@ GameObject:
   - component: {fileID: 1978471637655604388}
   - component: {fileID: 5420857361349278248}
   - component: {fileID: 8616685848737228376}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: PlayerCapsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -251,6 +256,7 @@ MonoBehaviour:
   PlayerInput: {fileID: 5420857361349278248}
   PlayerInputAsset: {fileID: 8616685848737228376}
   Controller: {fileID: 8616685848737228382}
+  health: 0
   Grounded: 0
   GroundLayers:
     serializedVersion: 2
