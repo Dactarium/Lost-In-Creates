@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(AudioSource))]
 public abstract class Enemy : MonoBehaviour, IInteractable
 {
     [SerializeField] public Creature creature;
@@ -8,8 +9,11 @@ public abstract class Enemy : MonoBehaviour, IInteractable
     [SerializeField] private Transform target;
 
     [SerializeField] private Animator animator;
+    [SerializeField] private SO_Sound moveSound;
 
     public bool canMove = false;
+
+    private AudioSource source;
 
     public enum EnemyState
     {
@@ -29,6 +33,8 @@ public abstract class Enemy : MonoBehaviour, IInteractable
         {
             target = FindObjectOfType<Player>().transform;
         }
+
+        source = GetComponent<AudioSource>();
     }
 
     protected virtual void Start()
@@ -44,6 +50,7 @@ public abstract class Enemy : MonoBehaviour, IInteractable
             agent.isStopped = false;
             agent.SetDestination(target.position);
             animator.SetBool("IsAttacking", true);
+            //if (!source.isPlaying) moveSound.PlaySound(source);
         }
         else
         {

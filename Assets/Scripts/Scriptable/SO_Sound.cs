@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -41,6 +43,25 @@ public class SO_Sound : ScriptableObject
         source.Play();
     }
 
+    public IEnumerator TransitionTo(AudioSource source)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            source.volume -= 0.2f;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        source.clip = _clip;
+        source.loop = _isLoop;
+        source.playOnAwake = _isOnAwaker;
+        source.Play();
+
+        for (int i = 0; i < 5; i++)
+        {
+            source.volume += 0.2f;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
     private enum SoundType
     {
         Shot,

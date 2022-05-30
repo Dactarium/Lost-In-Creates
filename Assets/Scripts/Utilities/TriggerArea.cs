@@ -5,8 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class TriggerArea : MonoBehaviour
 {
-    [SerializeField] private SnapshotController _controller;
     [SerializeField] private SnapshotController.Area _area;
+    [SerializeField] private SnapshotController _controller;
+    [SerializeField] private SoundPlayer _soundPlayer;
     private BoxCollider _collider;
 
     private void Awake()
@@ -20,5 +21,6 @@ public class TriggerArea : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         _controller.ChangeArea(_area);
+        _soundPlayer.ChangeArea(_area);
     }
 }
