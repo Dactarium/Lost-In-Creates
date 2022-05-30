@@ -14,13 +14,18 @@ public class GameManager : Singleton<GameManager>
 	public Enemy sunFlower;
 	public Enemy worm;
 
-	private void Start()
+	private void OnEnable()
 	{
 		Events.OnDead += GameOver;
 	}
 
+	private void OnDisable()
+	{
+		Events.OnDead -= GameOver;
+	}
+
 	private void GameOver()
 	{
-		SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
+		SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
 	}
 }

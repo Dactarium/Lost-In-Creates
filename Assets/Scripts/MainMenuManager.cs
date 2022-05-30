@@ -48,11 +48,14 @@ public class MainMenuManager : MonoBehaviour
         _masterVolume.value = PlayerPrefs.GetFloat("MasterVolume", 0f);
         _musicVolume.value = PlayerPrefs.GetFloat("MusicVolume", 0f);
         _sfxVolume.value = PlayerPrefs.GetFloat("SFXVolume", 0f);
+
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
     }
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Game", LoadSceneMode.Single);
     }
 
     public void ExitGame()
